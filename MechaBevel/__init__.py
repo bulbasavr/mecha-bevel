@@ -43,7 +43,7 @@ class BsPropertyes(PropertyGroup):
 
 
 class BS_OT_bevel_shader(Operator):
-    bl_idname = "object.simple_operator"
+    bl_idname = "object.bevel_shader_operator"
     bl_label = "Add Bevel Material"
 
     def execute(self, context):
@@ -139,7 +139,7 @@ class BS_PT_bevel_shader(Panel):
         row = layout.row()
 
         if bpy.context.object.type == "MESH":
-            row.operator('object.simple_operator', icon='SHADING_RENDERED')
+            row.operator('object.bevel_shader_operator', icon='SHADING_RENDERED')
             row = layout.row()
             layout.prop(mytool, "bevel_shader_thickness_property")
         else:
