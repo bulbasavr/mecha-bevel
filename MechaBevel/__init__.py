@@ -90,7 +90,7 @@ class BS_OT_bevel_shader(Operator):
 
         atr = material_basic.node_tree.nodes.new("ShaderNodeAttribute")
         atr.location = (-1000, -400)
-        bpy.data.materials[bpy.context.object.active_material.name].node_tree.nodes[atr.name].attribute_name = "Col"
+        bpy.data.materials[bpy.context.object.active_material.name].node_tree.nodes[atr.name].attribute_name = "Attribute"
 
         img_tex = material_basic.node_tree.nodes.new("ShaderNodeTexImage")
         img_tex.location = (-700, -20)
